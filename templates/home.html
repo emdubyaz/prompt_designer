@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<style>
+    body {
+        background-image: url("https://44.media.tumblr.com/0cec54082c4e378e32b2687739b28758/7b100907ad94189e-78/s400x600_f1/9a11676bef44adc3f476139a19f836a30aa78873.gif");
+        background-size: cover;
+        min-height: 100vh;
+      }
+
+    header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1rem;
+        background-color: var(--primary-color);
+        color: white;
+        background-image: url('https://www.stryvemarketing.com/wp-content/uploads/2016/04/BlogImage_90sWebsite-1.webp');
+        background-size: cover;
+        background-position: center;
+      }
+
+      .article-card {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 1rem;
+        padding: 1rem;
+        background-color: white;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        border-radius: 5px;
+      }
+
+</style>
+<body>
+<header>
+<h1>
+    Dall-E Prompt Designer
+</h1>
+</header>
+<form method="post" class="article-card">
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-12" style="text-align: center;" >
+            <h3>Hello DALL-E! Create an image of:</h3>
+            <br/><br/>
+            <b>Describe subject:</b>
+            <br/><br/> 
+            <input name="subject"/>
+            <br/><br/>
+            <b>Describe background/environment: </b>
+            <br/><br/>
+            <input name="background"/>
+            <br/><br/>
+            <br/><br/>
+        </div>
+    </div>
+    <!-------------------------------ROW------------------------------>
+    <div class="row" class="article-card" >
+    <!------------------------------COLUMN ONE---------------------------->
+        <div class="col-sm-3" class="p-3 border bg-light">
+            <label for="mood">Mood: </label></br>
+            <select name="mood" id="mood">
+                <option value="" selected></option>
+                <option value="Joyful">Joyful</option>
+                <option value="Vivid">Vivid</option>
+                <option value="Energetic">Energetic</option>
+                <option value="Relaxed">Relaxed</option>
+                <option value="Tranquil">Tranquil</option>
+                <option value="Elegant">Elegant</option>
+                <option value="Cosy">Cosy</option>
+                <option value="Subtle">Gloomy</option>
+                <option value="Bleak">Bleak</option>
+                <option value="Elegant">Ominous</option>
+                <option value="Somber">Somber</option>
+                <option value="Sinister">Sinister</option>
+                <option value="Ghastly">Ghastly</option>
+            </select>
+            <br/><br/>
+            <label for="vibe">Vibe: </label></br>
+            <select name="vibe" id="vibe">
+                <option value="" selected></option>
+                <option value="High Detail">High Detail</option>
+                <option value="Studio">Studio</option>
+                <option value="Sharp">Sharp</option>
+                <option value="Faded">Faded</option>
+                <option value="Dreamy">Dreamy</option>
+                <option value="Overcast">Overcast</option>
+                <option value="Misty">Misty</option>
+                <option value="Smoke">Smoke</option>
+                <option value="Epic">Epic</option>
+                <option value="Vast">Vast</option>    
+            </select>
+            <br/><br/>
+            <label for="theme">Theme: </label></br>
+            <select name="theme" id="theme">
+                <option value="" selected></option>
+                <option value="Vaporwave">Vaporwave</option>
+                <option value="Steampunk">Steampunk</option>
+                <option value="Gothic">Gothic</option>
+                <option value="Post-apocalyptic">Post-apocalyptic</option>
+                <option value="Cyberpunk">Cyberpunk</option>
+                <option value="Steampunk">Steampunk</option>
+                <option value="Dieselpunk">Dieselpunk</option>
+                <option value="Cybernetic">Cybernetic</option>
+                <option value="Medeival">Medeival</option>
+                <option value="High Fantasy">High Fantasy</option>
+                <option value="Dark Fantasy">Dark Fantasy</option>
+                <option value="Spaghetti Western">Spaghetti Western</option>
+                <option value="Anime">Anime</option>
+            </select>
+            <br/><br/>
+        </div>
+        <!------------------------------COLUMN TWO---------------------------->
+        <div class="col-sm-3" class="p-3 border bg-light">
+            <label for="lighting">Lighting: </label></br>
+            <select name="lighting" id="lighting">
+                <option value="" selected></option>
+                <option value="Natural Lighting">Natural Lighting</option>
+                <option value="Sunlight">Sunlight</option>
+                <option value="Moonlight">Moonlight</option>
+                <option value="Warm Lighting">Warm Lighting</option>
+                <option value="Cold Lighting">Cold Lighting</option>
+                <option value="Studio Lighting">Studio Lighting</option>
+                <option value="Backlighting">Backlighting</option>
+                <option value="Candlelight">Candlelight</option>
+                <option value="High-Key Lighting">High-Key Lighting</option>
+                <option value="Low-Key Lighing">Low-Key Lighting</option>
+                <option value="Flash Photography">Flash Photography</option>
+                <option value="Neon Lighting">Neon Lighting</option>
+                <option value="Fluorescent Lighting">Fluorescent Lighting</option>
+            </select>
+            <br/><br/>
+            <label for="ambiance">Ambiance: </label></br>
+            <select name="ambience" id="ambience">
+                <option value="" selected></option>
+                <option value="Golden Hour">Golden Hour</option>
+                <option value="Blue Hour">Blue Hour</option>
+                <option value="Midday">Midday</option>
+                <option value="Dawn">Dawn</option>
+                <option value="Dusk">Dusk</option>
+                <option value="Overcast">Overcast</option>
+                <option value="Stormy">Stormy</option>
+            </select>
+            <br/><br/>
+        </div>
+        <!------------------------------COLUMN THREE---------------------------->
+        <div class="col-sm-3" class="p-3 border bg-light">
+            <label for="camera_proximity">Camera Proximity: </label></br>
+            <select name="camera_proximity" id="camera_proximity">
+                <option value="" selected></option>
+                <option value="Extreme Closeup">Extreme Closeup</option>
+                <option value="Closeup">Closeup</option>
+                <option value="Portrait">Portrait</option>
+                <option value="Head and Shoulders">Head and Shoulders</option>
+                <option value="Mid Shot">Mid Shot</option>
+                <option value="Wide Shot">Wide Shot</option>
+                <option value="Long Shot">Long Shot</option>
+                <option value="Extreme Wide Shot">Extreme Wide Shot</option>
+                <option value="Extreme Long Shot">Extreme Long Shot</option>
+            </select>
+            <br/><br/>
+            <label for="camera_angle">Camera Angle: </label></br>
+            <select name="camera_angle" id="camera_angle">
+                <option value="" selected></option>
+                <option value="Overview View">Overhead View</option>
+                <option value="High Angle">High Angle</option>
+                <option value="Low Angle">Low Angle</option>
+                <option value="Shot From Below">Shot From Below</option>
+                <option value="Extreme Long Shot">Extreme Long Shot</option>
+                <option value="Drone Photography">Drone Photography</option>
+                <option value="Skewed Shot">Skewed Shot</option>
+            </select>
+            <br/><br/>
+        </div>
+        <!------------------------------COLUMN---------------------------->
+        <div class="col-sm-3" class="p-3 border bg-light">
+            <label for="camera_settings">Camera Settings: </label></br>
+            <select name="camera_settings" id="camera_settings">
+                <option value="" selected></option>
+                <option value="Fast Shutter Speed">Fast Shutter Speed</option>
+                <option value="Slow Shutter Speed">Slow Shutter Speed</option>
+            </select>
+            <br/><br/>
+            <label for="camera_effects">Camera Effects: </label></br>
+            <select name="camera_effects" id="camera_effects">
+                <option value="" selected></option>
+                <option value="Bokeh">Bokeh</option>
+                <option value="Motion Blur">Motion Blur</option>
+                <option value="Telephoto Lens">Telephoto Lens</option>
+                <option value="Macro Lens">Macro Lens</option>
+                <option value="Fish Eye Lens">Fish Eye Lens</option>
+            </select>
+            <br/><br/>
+            <label for="film_types">Film Types: </label></br>
+            <select name="film_types" id="film_types">
+                <option value="" selected></option>
+                <option value="35mm Camera">35mm Camera</option>
+                <option value="4k DSLR">4k DSLR</option>
+                <option value="85mm Sigma Art Lens">85mm Sigma Art Lens</option>
+                <option value="Kodachrome">Kodachrome</option>
+                <option value="Autochrome">Motion Blur</option>
+                <option value="Lomography">Lomography</option>
+                <option value="Polaroid">Polaroid</option>
+                <option value="Camera Phone">Camera Phone</option>
+                <option value="Disposable Camera">Disposable Camera</option>
+                <option value="CCTV">CCTV</option>
+                <option value="90's VHS Tape">90's VHS Tape</option>
+                <option value="Daguerrotype">Daguerrotype</option>
+                <option value="Camera Obscura">Camera Obscura</option>
+
+            </select>
+            <br/><br/>
+
+        </div>
+        <div class="row">
+            <div class="col-sm-12" style="text-align: center;">
+            <button type="submit">Submit</button>
+            <div>
+            <br/><br/>
+            
+</form>
+            <br/><br/>
+        </div>
+        <div class="row">
+            <div class="col-sm-12" class="article-card">
+                <img src="{{ image_url }}">
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+
+
+
